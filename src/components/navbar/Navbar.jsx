@@ -50,7 +50,7 @@ const Navbar = () => {
               <Link to="/about" className={styles['navbar-link']}>About US</Link>
             </li>
 
-         
+
             <li className={styles['navbar-item']} onClick={handleDropdownToggle}>
               <Link to="universities" className={styles['navbar-link']}>Universities</Link>
               {isDropdownOpen && (
@@ -132,3 +132,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

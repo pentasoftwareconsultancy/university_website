@@ -60,6 +60,40 @@ function About() {
           the evidence, and the community connections to make it a reality.
         </p>
       </div>
+
+      <div className={styles.container5}>
+      <h2 className={styles.title}>
+        In particular, in the 21st century, we believe three skills are fundamental
+      </h2>
+      <div className={styles.skillsContainer5}>
+        <div className={styles.skillBox}>
+          <p>The ability to find fact-based information</p>
+        </div>
+        <div className={styles.skillBox}>
+          <p>The ability to assess the quality of information</p>
+        </div>
+        <div className={styles.skillBox}>
+          <p>The ability to creatively and effectively use information to accomplish a goal</p>
+        </div>
+      </div>
+    </div>
+    <div className={styles.aboutUs}>
+      <h3>Our Mission</h3>
+      <p>
+        At our core, we believe that education is the most powerful tool to transform the world. 
+        We are dedicated to creating innovative learning environments where students thrive and develop essential skills for the 21st century.
+      </p>
+      <p>
+        Our mission is to empower educators and learners by providing cutting-edge tools, 
+        fostering creativity, and encouraging critical thinking. We aim to inspire a passion for lifelong learning
+        and to build a global community united by the shared vision of better education for all.
+      </p>
+      <div className={styles.imageContainer}>
+        <img src="https://img.freepik.com/free-photo/group-business-…cutives-discussing-laptop-their-des_1170-1949.jpg" alt="Students collaborating" />
+        <img src="https://media.istockphoto.com/id/1018416482/photo/multiethnic-diverse-group-of-creative-team-or-business-coworker-clapping-hands-in-project.jpg?s=1024x1024&w=is&k=20&c=oTLh_BYLVRunDWcBZMTYSMmcX1IIPVBW6lfY2qP-qPs=" alt="Teacher guiding students" />
+        <img src="https://img.freepik.com/free-photo/school-is-closed-due-covid19-pandemic_637285-8841.jpg?ga=GA1.1.296228764.1729021107&semt=ais_incoming" alt="Modern classroom" />
+      </div>
+    </div>
     </>
   );
 }
