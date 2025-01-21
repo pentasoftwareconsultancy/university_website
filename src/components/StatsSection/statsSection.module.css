@@ -1,0 +1,90 @@
+.statsSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('https://live.themewild.com/eduka/assets/img/counter/01.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+
+}
+
+.statsSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(17, 110, 99, 0.6);
+    z-index: 1;
+}
+
+.statsSection>* {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   width: 100%;
+    /* gap: 20px; */
+    /* overflow-x: auto; */
+    padding: 0 230px;
+    /* margin-left: 100px; */
+}
+
+.statCard {
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+
+}
+
+.iconWrapper {
+    margin-bottom: 15px;
+    background-color: #fda31b;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statImage {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    /* margin: 10px 0; */
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: #fff;
+    margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+    .statCard {
+        min-width: 220px;
+    }
+}

@@ -1,0 +1,182 @@
+/* Footer container styling */
+.footer {
+    background-color: #002147;
+    color: #ffffff;
+    padding: 0 180px; /* Creates space around the content */
+    font-family: Arial, sans-serif;
+    padding-top: 40px; /* Adds space at the top of the footer */
+  }
+  
+  /* Flexbox container for the footer */
+  .container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px; /* Adjusted for better spacing between sections */
+  }
+  
+  /* Styling for the brand section */
+  .brand {
+    flex: 1.5;
+    margin-bottom: 30px; /* Creates space below the brand section */
+    min-width: 250px;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 32px; /* Increased size for better visibility */
+    font-weight: bold;
+    color: #fcb12b;
+    margin-bottom: 15px;
+  }
+  
+  /* Description of the brand */
+  .description {
+    margin: 10px 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Contact section styling */
+  .contact p {
+    font-size: 14px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center; /* Center-align icons and text */
+    gap: 8px;
+  }
+  
+  /* Styling for the links section */
+  .links {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  /* Links header styling */
+  .links h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcb12b;
+  }
+  
+  /* Styling for the list of links */
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Individual link styling */
+  .links li {
+    margin: 8px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect for links */
+  .links li:hover {
+    color: #fcb12b;
+  }
+  
+  /* Newsletter section styling */
+  .newsletter {
+    flex: 1.5;
+    min-width: 300px;
+  }
+  
+  /* Newsletter header */
+  .newsletter h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcb12b;
+  }
+  
+  /* Newsletter description */
+  .newsletter p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  /* Newsletter form styling */
+  .newsletter form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Input field styling */
+  .input {
+    padding: 12px;
+    flex: 1;
+    border: 1px solid #fcb12b;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  /* Focus effect for the input */
+  .input:focus {
+    border-color: #ffffff;
+  }
+  
+  /* Button styling for newsletter */
+  .button {
+    padding: 12px 20px;
+    background-color: #fcb12b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect for the button */
+  .button:hover {
+    background-color: #d99f2a;
+  }
+  
+  /* Bottom section styling */
+  .bottom {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ffffff30;
+    padding-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Social icons styling */
+  .socialIcons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* Social icons appearance */
+  .socialIcons i {
+    font-size: 24px; /* Set a larger size for social icons */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for social icons */
+  .socialIcons i:hover {
+    color: #fcb12b;
+  }
+  
+  /* Social icons on the right */
+  .socialIcons span {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect for social icons */
+  .socialIcons span:hover {
+    color: #fcb12b;
+  }
+  

@@ -1,0 +1,132 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.welcomeText {
+  color: #ffcc00;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heading {
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #ffcc00;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutButton {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.aboutButton:hover {
+  background-color: #e0a800;
+}
+
+.learnButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #ffcc00;
+}
+
+.learnButton:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 4;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.leftButton {
+  left: 1rem;
+}
+
+.rightButton {
+  right: 1rem;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}

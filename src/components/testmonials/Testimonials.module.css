@@ -1,0 +1,130 @@
+.testimonialsSection {
+  text-align: center;
+  padding: 0 230px; 
+  background-color: #f9f9f9;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-left: auto;  /* Ensure proper margin on left side */
+  margin-right: auto; /* Ensure proper margin on right side */
+}
+
+strong {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f7931e;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-block;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.highlight {
+  color: #f7931e;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 40px; /* Space between cards */
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Max width for the grid */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 60px 60px 60px 0;
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.rating {
+  color: #ff9800;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.feedback {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 0.8rem;
+  border: 3px solid #f7931e;
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.role {
+  color: #f7931e;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f7931e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 70px 70px 70px 0;
+}
+
+@media (max-width: 1024px) {
+  .cardsContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsContainer {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+    gap: 20px; /* Reduced gap on mobile */
+  }
+}

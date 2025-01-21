@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  justify-content: space-between; /* Spread out left and right sections */
+  padding: 20px;
+  /* max-width: 1200px; */
+  margin: 0 50px; /* Center the container */
+  box-sizing: border-box;
+  height: 50%;
+  width: 100%;
+}
+
+/* Main right section */
+.mainright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* Right Section */
+.rightmain {
+  flex: 1; 
+  /* margin-left: 400px; */
+  /* display: flex; */
+  flex-direction: column;
+  gap: 20px; /* Space between image wrappers */
+  justify-content: center; /* Vertically center the content */
+  align-items: center;
+  /* margin: 0 50px; */
+}
+
+.imageWrapper1 {
+ /* position: relative; */
+  border-radius: 20px;
+  /* overflow: hidden; */
+  transition: all 0.3s ease-out 0s;
+  /* margin-left: 300px; */
+}
+
+
+.image2 {
+ width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px dashed #fda31b;
+  padding: 8px;
+  position: absolute;
+
+  /* left: 80%; */
+  transform: translateX(-50%);
+  gap: 40px;
+  /* margin-top: 50px; */
+}
+
+.imageWrapper2 {
+  /* position: relative; */
+   border-radius: 20px;
+   /* overflow: hidden; */
+   transition: all 0.3s ease-out 0s;
+   margin-top: 300px;
+ }  
+
+.image3 {
+ width: 60%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0 80px 80px 80px;
+  
+  margin-right: 600px;
+  
+}
+
+
+/* Left Section image wrapper one */
+.leftmain {
+  flex: 1;
+  padding-right: 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  color: #333;
+  /* margin: 0 50px; -- this line was commented out, so you can remove or uncomment if needed */
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.image1 {
+  width: 70%;
+  height: auto;
+  border-radius: 80px 80px 0 80px;
+}
+
+.bottomBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fda31b;
+  padding: 20px;
+  border-radius: 70px 70px 70px 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  gap: 30px;
+}
