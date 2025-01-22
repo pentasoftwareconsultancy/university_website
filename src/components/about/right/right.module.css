@@ -108,3 +108,55 @@
   font-weight: bold;
   gap: 30px;
 }
+
+
+@media (max-width: 768px) {
+  /* Adjust container layout on mobile */
+  .container {
+    flex-direction: column; /* Stack left and right sections vertically */
+    padding: 10px;
+    margin: 0; /* Remove margins on small screens */
+  }
+
+  /* Main right section layout */
+  .mainright {
+    flex-direction: column; /* Stack left and right sections vertically on mobile */
+    width: 100%;
+  }
+
+  /* Right section image sizes */
+  .image2 {
+    width: 150px; /* Smaller size on mobile */
+    height: 150px;
+  }
+
+  .image3 {
+    width: 80%; /* Make image 3 responsive */
+    margin-right: 0; /* Remove large right margin on mobile */
+    border-radius: 10px; /* Less rounded corners on mobile */
+  }
+
+  /* Left section text */
+  .leftmain {
+    font-size: 1rem; /* Smaller text on mobile */
+    padding: 10px;
+  }
+
+  /* Left section image adjustments */
+  .image1 {
+    width: 60%; /* Make image 1 full width on mobile */
+    border-radius: 70px 70px 70px 0;
+  }
+
+  .bottomBadge {
+    font-size: 0.9rem; /* Smaller badge text */
+    padding: 10px;
+    gap: 10px; /* Reduce gap between icon and text */
+  }
+
+  /* Image Wrappers */
+  .imageWrapper, .imageWrapper1, .imageWrapper2 {
+    width: 100%; /* Ensure wrappers are full width */
+    margin-bottom: 20px;
+  }
+}

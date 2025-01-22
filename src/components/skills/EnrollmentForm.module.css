@@ -168,3 +168,62 @@
 .button:hover {
     background: #d48c1d;
 }
+
+
+@media (max-width: 768px) {
+    /* Adjust container padding for smaller screens */
+    .container1 {
+        flex-direction: column;
+        padding: 20px; /* Less padding on mobile */
+        margin-top: 30px;
+    }
+
+    .container1::before {
+        background: rgba(0, 39, 77, 0.8); /* Keep the overlay */
+    }
+
+    .leftSection,
+    .rightSection {
+        width: 100%; /* Full width on mobile */
+        margin-top: 20px; /* Reduce top margin */
+    }
+
+    .leftSection {
+        margin-top: 20px; /* Reduce margin */
+    }
+
+    .head2 h2 {
+        font-size: 20px; /* Smaller heading on mobile */
+    }
+
+    .head2 p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .input,
+    .textarea {
+        font-size: 12px; /* Smaller input fields */
+    }
+
+    .button {
+        padding: 10px 15px; /* Adjust button padding */
+        font-size: 12px; /* Smaller button text */
+    }
+
+    .rightSection h2 {
+        font-size: 22px; /* Smaller heading in right section */
+    }
+
+    .rightSection p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .progressBars label {
+        font-size: 12px; /* Smaller label text */
+    }
+
+    .button {
+        padding: 12px 20px; /* Adjust button padding */
+        font-size: 12px; /* Smaller button text */
+    }
+}

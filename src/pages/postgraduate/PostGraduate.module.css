@@ -94,3 +94,39 @@ h2 {
 .table td {
   background-color: rgba(255, 255, 255, 0.1); 
 }
+
+@media (max-width: 768px) {
+  /* Modal Content */
+  .modalContent {
+    padding: 15px; /* Reduced padding on smaller screens */
+    max-width: 90%; /* Limit width to 90% */
+  }
+
+  /* Close button */
+  .closeButton {
+    padding: 3px 8px; /* Smaller padding for close button */
+    font-size: 12px;
+  }
+
+  /* Table container */
+  .table-container {
+    max-height: 50vh; /* Adjust max height */
+  }
+
+  /* Table styles for mobile */
+  .table th, .table td {
+    padding: 8px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  /* Prevent horizontal scrolling by ensuring table fits within the viewport */
+  .table {
+    width: 100%;
+    table-layout: fixed; /* Prevent overflow */
+    word-wrap: break-word; /* Break long words */
+  }
+}

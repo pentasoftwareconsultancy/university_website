@@ -28,3 +28,15 @@
   max-width: 1200px; 
   padding: 0 20px; /* Add equal padding to both sides */
 }
+
+
+@media (max-width: 768px) {
+ 
+
+  .grid {
+    grid-template-columns:  1fr; /* Two columns on mobile */
+    gap: 15px; /* Reduced gap between cards */
+    padding: 0 10px; /* Add smaller padding to avoid overflow */
+    margin: 0 15px; /* Ensure equal left and right margins */
+  }
+}

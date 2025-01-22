@@ -68,6 +68,7 @@ strong {
   color: #ff9800;
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
+  margin-right: 200px;
 }
 
 .feedback {
@@ -116,15 +117,22 @@ strong {
   border-radius: 70px 70px 70px 0;
 }
 
-@media (max-width: 1024px) {
-  .cardsContainer {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
-  }
-}
 
 @media (max-width: 768px) {
+  .testimonialsSection {
+    padding: 0 20px;
+  }
+
   .cardsContainer {
     grid-template-columns: 1fr; /* 1 card per row on mobile */
-    gap: 20px; /* Reduced gap on mobile */
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .rating {
+    margin-right: 50px;
   }
 }

@@ -119,3 +119,37 @@
 .navButton.right {
   right: 1rem;
 }
+
+
+@media (max-width: 768px) {
+  /* Adjust slider width */
+  .slider {
+    width: 100%;
+    padding: 0 20px; /* Add padding for better alignment */
+  }
+
+  /* Adjust number of cards per row */
+  .card {
+    min-width: 45%; /* Show two cards per row */
+    margin: 10px 0; /* Reduced margin for smaller screens */
+  }
+
+  .title {
+    font-size: 1rem; /* Smaller title font size */
+  }
+
+  .description {
+    font-size: 0.8rem; /* Smaller description font size */
+  }
+
+  .readMore {
+    font-size: 0.9rem; /* Smaller read more text */
+  }
+
+  /* Adjust navigation buttons size */
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem; /* Smaller button size */
+  }
+}

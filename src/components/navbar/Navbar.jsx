@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './navbar.module.css';
@@ -43,70 +42,17 @@ const Navbar = () => {
 
         <nav id="navbar" className={`${styles.navbar} ${isMenuOpen ? styles.active : ''}`}>
           <ul id="navbar-list" className={styles['navbar-list']}>
-            <li>
-              <Link to="/" className={styles['navbar-link']}>Home</Link>
-            </li>
-            <li>
-              <Link to="/about" className={styles['navbar-link']}>About US</Link>
-            </li>
-
-
+            <li><Link to="/" className={styles['navbar-link']}>Home</Link></li>
+            <li><Link to="/about" className={styles['navbar-link']}>About US</Link></li>
             <li className={styles['navbar-item']} onClick={handleDropdownToggle}>
               <Link to="universities" className={styles['navbar-link']}>Universities</Link>
-              {isDropdownOpen && (
-                <ul className={styles['dropdown-menu']}>
-                  <li>
-                    <Link to="/universities/arunodayauniversity" className={styles['dropdown-link']}>Arunodaya University</Link>
-                  </li>
-                  <li>
-                    <Link to="/universities/ycmou" className={styles['dropdown-link']}>YCMOU</Link>
-                  </li>
-                  <li>
-                    <Link to="/universities/singhaniauniversity" className={styles['dropdown-link']}>Singhania University</Link>
-                  </li>
-                  <li>
-                    <Link to="/universities/bvuniversity" className={styles['dropdown-link']}>BVU University</Link>
-                  </li>
-                </ul>
-              )}
             </li>
 
-            {/* Updates Dropdown */}
             <li className={styles['navbar-item']} onClick={handleUpdatesDropdownToggle}>
               <Link to="/programs" className={styles['navbar-link']}>Programs</Link>
-              {isUpdatesDropdownOpen && (
-                <ul className={styles['dropdown-menu']}>
-                  <li>
-                    <Link to="/programs/undergraduate" className={styles['dropdown-link']}>Under Graduate Course</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/postgraduate" className={styles['dropdown-link']}>Post Graduate Course</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/diploma" className={styles['dropdown-link']}>Diploma Engineering</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/technology" className={styles['dropdown-link']}>Bachelor Of Technology</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/master" className={styles['dropdown-link']}>Master Of Technology</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/diplomacourse" className={styles['dropdown-link']}>Diploma Course</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/certificate" className={styles['dropdown-link']}>Certificate Course</Link>
-                  </li>
-                  <li>
-                    <Link to="/programs/pgdiploma" className={styles['dropdown-link']}>P. G Diploma Course</Link>
-                  </li>
-                </ul>
-              )}
             </li>
 
-            <li>
-              <Link to="/help" className={styles['navbar-link']}>Help Desk</Link>
-            </li>
+            <li><Link to="/help" className={styles['navbar-link']}>Help Desk</Link></li>
           </ul>
         </nav>
 
@@ -132,4 +78,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

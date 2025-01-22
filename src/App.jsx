@@ -37,9 +37,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/universities" element={<Universities />} />
-        <Route path="/universities/arunodayauniversity" element={<ArunodayaUniversity />} />
+        {/* <Route path="/universities/arunodayauniversity" element={<ArunodayaUniversity />} />
         <Route path="/universities/ycmou" element={<YCMOU />} />
-        <Route path="/universities/singhaniauniversity" element={<Singhania />} />
+        <Route path="/universities/singhaniauniversity" element={<Singhania />} /> */}
         {/* <Route path="/universities/bvuniversity" element={<BharathiUniversity />} /> */}
         <Route path="/programs" element={<Programs />} />
         <Route path="/programs/undergraduate" element={<UnderGraduate />} />

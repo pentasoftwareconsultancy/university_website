@@ -76,15 +76,37 @@
     margin-right: 30px;
 }
 
+
 @media (max-width: 768px) {
     .container {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        gap: 10px;
-        overflow-x: auto;
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
     }
 
     .statCard {
-        min-width: 220px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .iconWrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .statImage {
+        width: 30px;
+        height: 30px;
+    }
+
+    .statNumber {
+        font-size: 2rem;
+    }
+
+    .statLabel {
+        font-size: 0.9rem;
+        margin-right: 0;
     }
 }

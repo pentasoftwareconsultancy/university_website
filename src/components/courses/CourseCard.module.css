@@ -125,16 +125,12 @@
   padding: 0; /* Remove additional padding */
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
-  }
-}
 
 @media (max-width: 768px) {
+  /* Adjust grid layout for smaller screens */
   .grid {
-    grid-template-columns: 1fr; /* 1 card per row on mobile */
-    gap: 20px; /* Reduced gap on mobile */
+    grid-template-columns: 1fr 1fr; /* Show two columns on smaller screens */
+    gap: 15px; 
+    margin: 0 20px; /* Set equal left and right margin */
   }
 }

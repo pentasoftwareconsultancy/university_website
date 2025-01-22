@@ -68,13 +68,41 @@
 }
 
 @media (max-width: 768px) {
+  /* Adjust the container to stack the cards on mobile */
   .container {
-    padding: 20px 15px; /* Reduced padding for smaller screens */
-    justify-content: center; /* Center the cards on mobile */
+    flex-direction: column; /* Stack cards vertically */
+    padding: 10px; /* Less padding on smaller screens */
   }
 
+  /* Adjust feature card width on mobile */
   .featureCard {
-    width: 100%; /* Make cards responsive and take full width on mobile */
-    max-width: 250px; /* Set a max width to prevent overflow */
+    width: 100%; /* Full width on mobile */
+    padding: 20px; /* Less padding on smaller screens */
+  }
+
+  /* Adjust icon size on smaller screens */
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Reduce number font size on mobile */
+  .number {
+    font-size: 40px; /* Smaller number on mobile */
+  }
+
+  /* Reduce title font size on mobile */
+  .title {
+    font-size: 16px; /* Smaller title font on mobile */
+  }
+
+  /* Reduce description font size on mobile */
+  .description {
+    font-size: 12px; /* Smaller description font on mobile */
+  }
+
+  /* Adjust the iconNumberContainer to have smaller gaps on mobile */
+  .iconNumberContainer {
+    gap: 10px;
   }
 }

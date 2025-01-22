@@ -53,3 +53,23 @@
     /* Adjust size of the play icon */
     height: 20px;
 }
+
+@media (max-width: 768px) {
+    /* Adjust the video container */
+    .videoContainer {
+        margin: 0 20px; /* Reduce the margin for smaller screens */
+        height: 35vh; /* Reduce the height of the video container */
+        border-radius: 30px; /* Less rounding of corners on mobile */
+    }
+
+    /* Play button size */
+    .playButton {
+        width: 50px; /* Smaller play button on mobile */
+        height: 50px;
+    }
+
+    .playButton img {
+        width: 15px; /* Smaller play icon */
+        height: 15px;
+    }
+}

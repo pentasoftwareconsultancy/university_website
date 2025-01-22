@@ -61,7 +61,7 @@ function About() {
         </p>
       </div>
 
-      <div className={styles.container5}>
+      {/* <div className={styles.container5}>
       <h2 className={styles.title}>
         In particular, in the 21st century, we believe three skills are fundamental
       </h2>
@@ -76,7 +76,7 @@ function About() {
           <p>The ability to creatively and effectively use information to accomplish a goal</p>
         </div>
       </div>
-    </div>
+    </div> */}
     <div className={styles.aboutUs}>
       <h3>Our Mission</h3>
       <p>

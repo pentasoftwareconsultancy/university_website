@@ -1,12 +1,20 @@
-
+/* Base styles for header */
 .header {
   background-color: #fff;
-  padding: 20px 20px;
+  padding: 20px;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+  box-sizing: border-box; /* Ensures padding is accounted for */
+}
+
+/* Ensure no horizontal scroll on the body */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -14,6 +22,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  box-sizing: border-box; /* Ensures container is inside the viewport */
 }
 
 .navbar {
@@ -21,14 +30,13 @@
   margin: 0;
   padding: 0;
   display: flex;
-  
 }
 
+/* Navbar links styling */
 .navbar-link {
   padding: 15px 20px;
   text-decoration: none;
   color: #333;
-
 }
 
 .navbar-link:hover {
@@ -36,23 +44,24 @@
 }
 
 .navbar-item {
-  position: relative; 
+  position: relative;
 }
 
+/* Dropdown Menu */
 .dropdown-menu {
   display: none;
-  position: absolute;  
-  top: 100%;          
+  position: absolute;
+  top: 100%;
   left: 0;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 9999;
-  width: 200px;  
+  width: 200px;
 }
 
 .navbar-item:hover .dropdown-menu {
-  display: block; 
+  display: block;
 }
 
 .dropdown-link {
@@ -66,222 +75,86 @@
   background-color: #f1f1f1;
 }
 
+/* Nav Toggle Button (hamburger) */
 .nav-toggle-btn {
-  display: none;
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 4;
 }
 
+.menu-icon {
+  display: block; /* Show the hamburger icon */
+}
+
+.close-icon {
+  display: none; /* Hide the close icon by default */
+}
+
+.nav-toggle-btn.active .menu-icon {
+  display: none; /* Hide the hamburger icon when menu is open */
+}
+
+.nav-toggle-btn.active .close-icon {
+  display: block; /* Show the close icon when menu is open */
+}
+
+/* Mobile View - Navbar */
 @media (max-width: 768px) {
-  .nav-toggle-btn {
-    display: block;
-  }
-
   .navbar {
-    display: none;  
-    flex-direction: column;
-  }
-
-  .navbar.active {
-    display: flex;  
-  }
-}
-
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0; 
-      margin-bottom: 100px; 
-    }
-    to {
-      opacity: 1; 
-      margin-bottom: 0;
-    }
-  }
-  .navbar-list.scrolled {
-    position: absolute;
-    left: 0;
-    padding-bottom: 10px;
-    padding-left: 45px;
-   
-    top: 95px;
-    border-top: solid var(--white);
-  
-    width: 50%;
-    background-color: var(--white);
-    color: var(--white);
-    animation: fadeIn 1s ease-in-out;
-  
-  }
-  
-  .navbar.active {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    display: none; /* Hide navbar by default on mobile */
+    flex-direction: column; /* Stack the navbar items vertically */
     width: 100%;
-    background-color: #ffffff;
-   
+    background-color: #fff;
     padding: 15px 0;
     text-align: center;
-    z-index: 3;
-  }
-  
-  .navbar-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-    
-    color: #000;
-  }
-  
-  .navbar-link {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--liteblack);
-    text-decoration: none;
-    padding: 8px 12px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .navbar-link:focus,
-  .navbar-link:hover {
-    color: var(--black);
-    transform: scale(1.1);
-    border-radius: 5px;
-    border-bottom: 2.5px solid var(--red);
-  }
-  
- 
-  .btn {
-    font-size: 2rem;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: #ffffff;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #218838;
-  }
-  
-  .dropdown-menu {
-    display: none;
     position: absolute;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     top: 100%;
     left: 0;
-    width: 200px;
-    list-style: none;
-    padding: 10px;
+    z-index: 9999;
   }
-  
-  .navbar-item:hover .dropdown-menu,
-  .navbar-item:active .dropdown-menu {
-    display: block;
+
+  .navbar.active {
+    display: flex; /* Show navbar when active */
   }
-  
-  .dropdown-link {
-    text-decoration: none;
+
+  /* Navbar list for mobile */
+  .navbar-list {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    padding: 0;
+    width: 100%;
+    gap: 10px; /* Gap between links */
+    margin-top: 15px;
+  }
+
+  .navbar-link {
+    font-size: 18px;
+    padding: 12px 15px;
+    width: 100%; /* Make links full-width */
     color: #333;
-    display: block;
-    padding: 10px;
-  }
-  
-  .dropdown-link:hover {
-    background-color: #f0f0f0;
   }
 
-  .nav-toggle-btn {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  .navbar-link:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Dropdown menus for mobile */
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    list-style: none;
+  }
+
+  .dropdown-link {
+    padding: 12px 20px;
+  }
+
+  .btn {
     font-size: 1.5rem;
-    z-index: 4;
+    padding: 10px 20px;
   }
-  
-  .menu-icon {
-    display: block;
-  }
-  
-  .nav-toggle-btn.active .menu-icon {
-    display: none;
-  }
-  
-
-  @media (max-width: 1024px) {
-    .container {
-      flex-direction: row;
-      justify-content: space-between;
-    
-    }
-  
-    .navbar {
-      display: none;
-    }
-  
-    .signUp {
-      display: none;
-    }
-  
-    .navbar.active {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 100%;
-      position: absolute;
-      top: 100%;
-      left: 0;
-    }
-  
-    .navbar-list {
-      flex-direction: column;
-      gap: 10px;
-      
-    }
-  
-    .navbar-link {
-      font-size: 1.8rem;
-      padding: 10px 0;
-    }
-  
-    .nav-toggle-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-    }
-  
-    .navbar-list.scrolled {
-      display: block;
-      padding: 0;
-      top: 2px;
-      align-items: center;
-      border-radius: none;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  
-  
-  @media (max-width: 768px) {
-    .header {
-      padding: 15px;
-    }
-  
-    .navbar-link {
-      font-size: 16px;
-    }
-  
-    .nav-toggle-btn {
-      font-size: 2.5rem;
-      color: #000;
-    }
-  }
+}

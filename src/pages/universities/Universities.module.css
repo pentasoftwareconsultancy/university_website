@@ -2,29 +2,54 @@
   text-align: center;
   padding: 20px;
   font-family: Arial, sans-serif;
-  max-width: 1200px; /* Maximum width for the container */
-  margin: 0 auto; 
-  margin-top: 80px;
-  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKV8qkCTxs81Pk-KKopcxx4bOuBYpPdRegA&s'); */
+  width: 100%; /* Make the container full width */
+  max-width: none; /* Remove the max-width limit */
+  margin: 0; /* Remove the auto margin */
+  margin-top: 70px;
+  position: relative; /* To position the overlay inside the container */
+  background-image: url('https://cdn.pixabay.com/photo/2023/09/17/19/10/building-8259184_1280.jpg'); /* Add the image URL here */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6); /* Darker overlay for better contrast with text */
+  border-radius: 12px;
+  z-index: 1; /* Ensures the overlay is above the background image but below content */
 }
 
 .heading {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px; /* Added space below the heading */
+  position: relative; /* Keeps the heading above the overlay */
+  z-index: 2; 
+  color: #000;
 }
 
 .subheading {
-  color: red;
+  color: #222;
   font-size: 1.2rem;
   margin: 10px 0;
+  position: relative; /* Keeps the subheading above the overlay */
+  z-index: 2; /* Ensures the subheading appears above the overlay */
 }
 
 .quote {
   font-size: 1rem;
   font-style: italic;
-  color: red;
+  color: #222;
   margin: 20px 0;
+  position: relative; /* Keeps the quote above the overlay */
+  z-index: 2; /* Ensures the quote appears above the overlay */
 }
 
 .grid {
@@ -40,6 +65,8 @@
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better aesthetics */
+  position: relative; /* Ensures card content is above the overlay */
+  z-index: 2; /* Keeps card content above the overlay */
 }
 
 .card img {
@@ -50,7 +77,7 @@
 
 .card h3 {
   margin: 15px 0;
-  color: red;
+  color: #222;
   font-size: 1.2rem;
 }
 
@@ -64,3 +91,51 @@
 }
 
 
+
+@media (max-width: 768px) {
+
+  /* .container */
+  .container {
+    padding: 15px; /* Reduced padding for smaller screens */
+    margin-top: 50px; /* Adjust margin for smaller screens */
+  }
+
+  /* .heading */
+  .heading {
+    font-size: 1.5rem; /* Smaller font size for heading */
+    margin-bottom: 15px;
+  }
+
+  /* .subheading */
+  .subheading {
+    font-size: 1rem; /* Adjust font size for subheading */
+    margin: 8px 0;
+  }
+
+  /* .quote */
+  .quote {
+    font-size: 0.9rem; /* Smaller font size for quotes */
+    margin: 15px 0;
+  }
+
+  /* .grid */
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on mobile */
+    gap: 15px; /* Adjust gap between items */
+  }
+
+  /* .card */
+  .card {
+    padding: 12px; /* Less padding on mobile */
+  }
+
+  .card h3 {
+    font-size: 1rem; /* Adjust font size for card heading */
+    margin: 12px 0;
+  }
+
+  /* .link */
+  .link {
+    font-size: 0.9rem; /* Smaller link text */
+  }
+}
