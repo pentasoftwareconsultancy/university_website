@@ -180,3 +180,71 @@
     color: #fcb12b;
   }
   
+
+  @media (max-width: 768px) {
+    /* Adjust footer container padding for smaller screens */
+    .footer {
+        padding: 0 20px;
+    }
+
+    /* Stack footer sections vertically and adjust gaps */
+    .container3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust sections to take full width on mobile */
+    .brand, .links, .newsletter {
+        flex: 1;
+        min-width: 100%;
+        margin-bottom: 30px; /* Adds spacing between sections */
+        text-align: center; 
+        
+      }
+
+    /* Adjust logo size for mobile */
+    .logo {
+        font-size: 28px;
+    }
+
+    /* Reduce font size for footer text */
+    .description, .contact p, .links li, .newsletter p {
+        font-size: 14px;
+        text-align-last: left;
+    }
+
+    /* Newsletter form and button adjustments */
+    .newsletter form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input {
+        width: 100%; /* Ensure input takes up full width on small screens */
+    }
+
+    .button {
+        width: 100%; /* Ensure button takes up full width on small screens */
+    }
+
+    /* Bottom section adjustments */
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust social icons for better mobile layout */
+    .socialIcons {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .socialIcons i {
+        font-size: 20px; /* Slightly smaller for mobile */
+    }
+
+    .socialIcons span {
+        font-size: 18px; /* Slightly smaller for mobile */
+    }
+}

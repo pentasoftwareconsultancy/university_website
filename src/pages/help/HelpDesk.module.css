@@ -1,0 +1,119 @@
+
+.contactFormWrapper {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 100px auto 0; /* Added top margin for gap between navbar and form */
+    
+  }
+  
+  /* Title of the contact form */
+  .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* The main container for the form inputs */
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Grouping the form inputs */
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for input and textarea labels */
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Input and textarea styling */
+  .inputField, .textareaField {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  /* Styling for the textarea */
+  .textareaField {
+    min-height: 120px;
+  }
+  
+  /* Styling for the submit button */
+  .submitButton {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the submit button */
+  .submitButton:hover {
+    background-color: #218838;
+  }
+  
+  /* Success message after form submission */
+  .successMessage {
+    background-color: #e6f7e6;
+    color: #4caf50;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+
+  @media (max-width: 768px) {
+    /* Wrapper adjustments */
+    .contactFormWrapper {
+        margin: 50px auto; /* Reduced margin for better space on mobile */
+        padding: 15px; /* Reduced padding for better use of space */
+        max-width: 90%; /* Use most of the screen width */
+    }
+
+    /* Title adjustments */
+    .title {
+        font-size: 20px; /* Reduced font size for mobile */
+    }
+
+    /* Adjust contact form container */
+    .contactForm {
+        gap: 15px; /* Reduced gap between form elements */
+    }
+
+    /* Adjust input field and textarea size */
+    .inputField, .textareaField {
+        padding: 12px; /* Increased padding for better tap targets */
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust submit button size */
+    .submitButton {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    /* Success message styling */
+    .successMessage {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding: 12px; /* Reduced padding for better mobile display */
+    }
+}

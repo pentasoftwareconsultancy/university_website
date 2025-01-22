@@ -90,18 +90,41 @@
   text-decoration: underline;
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack items vertically on small screens */
+    padding: 20px;
+    height: auto; 
+    margin-top: 80px; /* Add a top margin to create space between navbar and content */
   }
 
-  .imageContainer, .courseList {
-    max-width: 100%;
-    padding: 0 20px;
+  .imageContainer {
+    max-width: 100%; /* Make image container take full width */
+    margin-bottom: 20px;
+    margin-top: 20px; /* Add margin on top for better spacing from the navbar */
   }
 
   .image {
-    max-width: 90%;
+    max-width: 100%;
+    border-radius: 8px; /* Reduce border radius for smaller screens */
+  }
+
+  .courseList {
+    max-width: 100%; /* Make course list container take full width */
+    padding: 0 20px;
+  }
+
+  .courseItem {
+    font-size: 18px; /* Reduce font size for mobile */
+    gap: 10px; /* Reduce gap between the checkmark and text */
+  }
+
+  .checkmark {
+    font-size: 20px; /* Reduce checkmark size */
+  }
+
+  .courseLink {
+    font-size: 16px; /* Smaller font for course link */
   }
 }
