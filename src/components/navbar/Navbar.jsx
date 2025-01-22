@@ -80,9 +80,8 @@
 // export default Navbar;
 
 
-
-
-import { useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import styles from "./navbar.module.css";
 
 const Navbar = () => {
@@ -96,18 +95,26 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <div className={styles.logo}>
-          {/* Logo here */}
+          {/* Add your logo here */}
         </div>
 
-        {/* Fix the className syntax */}
         <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/universities"></a>Universities</li>
-          <li><a href="/programs">Programs</a></li>
-          <li><a href="/help">Help Desk</a></li>
-          {/* <li><a href="/contactUs">Contact Us</a></li> */}
-          {/* <li><BookDemo /></li> */}
+          {/* Use Link instead of a for routing */}
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/universities">Universities</Link>
+          </li>
+          <li>
+            <Link to="/programs">Programs</Link>
+          </li>
+          <li>
+            <Link to="/help">Help Desk</Link>
+          </li>
         </ul>
 
         <div className={styles.hamburger} onClick={toggleMenu}>
