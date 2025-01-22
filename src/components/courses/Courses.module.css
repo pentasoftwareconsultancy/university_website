@@ -37,6 +37,6 @@
     grid-template-columns:  1fr; /* Two columns on mobile */
     gap: 15px; /* Reduced gap between cards */
     padding: 0 10px; /* Add smaller padding to avoid overflow */
-    margin: 0 15px; /* Ensure equal left and right margins */
+    margin: 0 40px; /* Ensure equal left and right margins */
   }
 }
