@@ -184,7 +184,6 @@
     z-index: 5;
   }
 
-  /* Hide navigation buttons if not needed */
   .navButton {
     display: none;
   }

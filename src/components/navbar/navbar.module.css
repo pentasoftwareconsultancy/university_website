@@ -1,227 +1,111 @@
-/* Base styles for header */
-.header {
-  background-color: #fff;
-  padding: 20px;
+/* Base styles for the navbar */
+.navbar {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  padding: 10px 0;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-sizing: border-box; /* Ensures padding is accounted for */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added subtle shadow */
 }
 
-/* Ensure no horizontal scroll on the body */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.container {
+/* Container for the navbar */
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  box-sizing: border-box; /* Ensures container is inside the viewport */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.navbar {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar-link {
-  padding: 15px 20px;
-  text-decoration: none;
-  color: #333;
-}
-
-.navbar-link:hover {
-  background-color: #f0f0f0;
-}
-
-.navbar-item {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
-  width: 200px;
-}
-
-.navbar-item:hover .dropdown-menu {
+/* Logo styling */
+.logo img {
+  max-height: 50px; /* Set a maximum height for the logo */
+  width: auto; /* Maintain aspect ratio */
   display: block;
 }
 
-.dropdown-link {
-  padding: 10px 20px;
-  text-decoration: none;
-  color: #333;
-  display: block;
-}
-
-.dropdown-link:hover {
-  background-color: #f1f1f1;
-}
-
-/* Nav Toggle Button (hamburger) */
-.nav-toggle-btn {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 4;
-}
-
-.menu-icon {
-  display: block;
-}
-
-.nav-toggle-btn.active .menu-icon {
-  display: none;
-}
-
-
-/* Animation for navbar when scrolled */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    margin-bottom: 100px;
-  }
-  to {
-    opacity: 1;
-    margin-bottom: 0;
-  }
-}
-
-.navbar-list.scrolled {
-  position: absolute;
-  left: 0;
-  padding-bottom: 10px;
-  padding-left: 45px;
-  top: 95px;
-  border-top: solid var(--white);
-  width: 50%;
-  background-color: var(--white);
-  color: var(--white);
-  animation: fadeIn 1s ease-in-out;
-}
-
-.navbar.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 15px 0;
-  text-align: center;
-  z-index: 3;
-}
-
-.navbar-list {
+/* Links container */
+.navLinks {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px;
-  color: #000;
+  gap: 40px;
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center;
+  flex: 1;
+  transition: all 0.3s ease; /* Smooth transition for layout */
 }
 
-.navbar-link {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--liteblack);
-  text-decoration: none;
-  padding: 8px 12px;
-  transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.navbar-link:focus,
-.navbar-link:hover {
-  color: var(--black);
-  transform: scale(1.1);
-  border-radius: 5px;
-  border-bottom: 2.5px solid var(--red);
-}
-
-/* Prevent scrolling issues */
-body {
-  overflow-x: hidden;
-}
-
-/* Button styles */
-.btn {
-  font-size: 2rem;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #28a745;
+/* Individual link styling */
+.navLinks a {
   color: #ffffff;
   text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  padding: 8px 15px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px; /* Slight rounding for links */
 }
 
-.btn:hover {
-  background-color: #218838;
+/* Hover effect for links */
+.navLinks a:hover {
+  background-color: #ff7a00; /* Hover background */
+  color: #ffffff;
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
+/* Hamburger menu button */
+.hamburger {
   display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 2000; /* Ensure hamburger is on top */
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 5px; /* Slightly rounded bars for smoother look */
+}
+
+/* Mobile navbar toggle */
+.navLinks.active {
+  display: flex; /* Show nav links when active */
   position: absolute;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  top: 100%;
+  top: 60px; /* Position below navbar */
   left: 0;
-  width: 200px;
-  list-style: none;
-  padding: 10px;
+  right: 0;
+  background-color: #333;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
 }
 
-.navbar-item:hover .dropdown-menu,
-.navbar-item:active .dropdown-menu {
-  display: block;
-}
+/* Mobile hamburger visibility */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hide the nav links by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Below the navbar */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px 0;
+    z-index: 1000;
+  }
 
-.dropdown-link {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  padding: 10px;
-}
+  .navLinks.active {
+    display: flex; /* Show nav links when active */
+  }
 
-.dropdown-link:hover {
-  background-color: #f0f0f0;
-}
-
-/* Hide the navbar toggle button by default */
-.nav-toggle-btn {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 4;
-}
-
-.menu-icon {
-  display: block;
-}
-
-/* Make the hamburger menu invisible when the navbar is active */
-.nav-toggle-btn.active .menu-icon {
-  display: none;
+  .hamburger {
+    display: flex; /* Only show hamburger on mobile */
+  }
 }
