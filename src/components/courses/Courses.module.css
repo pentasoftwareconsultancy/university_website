@@ -29,14 +29,25 @@
   padding: 0 20px; /* Add equal padding to both sides */
 }
 
-
 @media (max-width: 768px) {
- 
-
   .grid {
-    grid-template-columns:  1fr; /* Two columns on mobile */
+    grid-template-columns: 1fr; /* Stack items in a single column on mobile */
     gap: 15px; /* Reduced gap between cards */
-    padding: 0 50px; 
-    margin: 0 20px; /* Ensure equal left and right margins */
+    padding: 0 15px; /* Add smaller padding to avoid overflow */
+    margin: 0 auto; /* Center-align the grid */
+  }
+
+  .courses {
+    padding: 40px 15px; /* Adjust top and bottom padding for smaller screens */
+  }
+
+  .heading {
+    font-size: 26px; /* Slightly smaller font size for mobile */
+    margin-bottom: 8px; /* Adjust spacing between heading and subtitle */
+  }
+
+  .subtitle {
+    font-size: 12px; /* Smaller font size for mobile */
+    margin-bottom: 30px; /* Adjust spacing for smaller screens */
   }
 }
