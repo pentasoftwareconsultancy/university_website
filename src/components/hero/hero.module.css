@@ -134,7 +134,8 @@
 
 @media (max-width: 768px) {
   .banner {
-    height: 400px; /* Adjust banner height on smaller screens */
+    height: 600px; /* Adjust banner height on smaller screens */
+
   }
 
   .content {
@@ -165,10 +166,16 @@
   .button {
     width: 100%; /* Make buttons full-width on mobile */
     padding: 1rem;
+    margin: 0 90px;
   }
 
   .learnButton {
     border: 2px solid #ffcc00;
+    width: 200px;
+  }
+  .aboutButton {
+    background-color: #ffcc00;
+    width: 200px;
   }
 
   .navButton {
@@ -180,5 +187,8 @@
   /* Hide navigation buttons if not needed */
   .navButton {
     display: none;
+  }
+  .bannerImage {
+    height: 600px;
   }
 }
