@@ -17,9 +17,7 @@ import MTechnology from './pages/master/MTechnology';
 import DiplomaCourse from './pages/diplomaCourse/DiplomaCourse';
 import Certificates from './pages/certificates/Certificates';
 import PGDiploma from './pages/pgdiploma/PGDiploma';
-import YCMOU from './pages/ycmou/YCMOU';
-import Singhania from './pages/singhania/Singhania'
-import BharathiUniversity from './pages/bharatiUniversity/BharathiUniversity';
+import ScrollTop from './components/scrollTop/ScrollTop';
 
 
 
@@ -31,16 +29,14 @@ function App() {
     <Router>
       {/* Render your Navbar */}
       <Navbar />
+      <ScrollTop />
       
       {/* Define the Routes here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/universities" element={<Universities />} />
-        {/* <Route path="/universities/arunodayauniversity" element={<ArunodayaUniversity />} />
-        <Route path="/universities/ycmou" element={<YCMOU />} />
-        <Route path="/universities/singhaniauniversity" element={<Singhania />} /> */}
-        {/* <Route path="/universities/bvuniversity" element={<BharathiUniversity />} /> */}
+      
         <Route path="/programs" element={<Programs />} />
         <Route path="/programs/undergraduate" element={<UnderGraduate />} />
         <Route path="/programs/postgraduate" element={<PostGraduate />} />

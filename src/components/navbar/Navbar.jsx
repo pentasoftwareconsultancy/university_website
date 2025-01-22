@@ -1,85 +1,3 @@
-// import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-// import styles from './navbar.module.css';
-
-// const Navbar = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-//   const [isUpdatesDropdownOpen, setIsUpdatesDropdownOpen] = useState(false);
-
-//   const handleToggleMenu = () => {
-//     setIsMenuOpen((prevState) => !prevState);
-//   };
-
-//   const handleDropdownToggle = () => {
-//     setIsDropdownOpen((prevState) => !prevState);
-//   };
-
-//   const handleUpdatesDropdownToggle = () => {
-//     setIsUpdatesDropdownOpen((prevState) => !prevState);
-//   };
-
-//   useEffect(() => {
-//     const header = document.getElementById('header');
-//     const handleScroll = () => {
-//       if (window.scrollY > 50) {
-//         header.classList.add(styles.scrolled);
-//       } else {
-//         header.classList.remove(styles.scrolled);
-//       }
-//     };
-
-//     window.addEventListener('scroll', handleScroll);
-//     return () => {
-//       window.removeEventListener('scroll', handleScroll);
-//     };
-//   }, []);
-
-//   return (
-//     <header className={styles.header} id="header">
-//       <div className={styles.container}>
-//         <a href="/" className={styles.logos}></a>
-
-//         <nav id="navbar" className={`${styles.navbar} ${isMenuOpen ? styles.active : ''}`}>
-//           <ul id="navbar-list" className={styles['navbar-list']}>
-//             <li><Link to="/" className={styles['navbar-link']}>Home</Link></li>
-//             <li><Link to="/about" className={styles['navbar-link']}>About US</Link></li>
-//             <li className={styles['navbar-item']} onClick={handleDropdownToggle}>
-//               <Link to="universities" className={styles['navbar-link']}>Universities</Link>
-//             </li>
-
-//             <li className={styles['navbar-item']} onClick={handleUpdatesDropdownToggle}>
-//               <Link to="/programs" className={styles['navbar-link']}>Programs</Link>
-//             </li>
-
-//             <li><Link to="/help" className={styles['navbar-link']}>Help Desk</Link></li>
-//           </ul>
-//         </nav>
-
-//         <button
-//           className={`${styles['nav-toggle-btn']} ${isMenuOpen ? styles.active : ''}`}
-//           aria-label="Toggle menu"
-//           onClick={handleToggleMenu}
-//         >
-//           <ion-icon
-//             name="menu-outline"
-//             aria-hidden="true"
-//             className={`${styles['menu-icon']} ${isMenuOpen ? styles.hidden : ''}`}
-//           ></ion-icon>
-//           <ion-icon
-//             name="close-outline"
-//             aria-hidden="true"
-//             className={`${styles['close-icon']} ${isMenuOpen ? '' : styles.hidden}`}
-//           ></ion-icon>
-//         </button>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Navbar;
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import styles from "./navbar.module.css";
@@ -87,8 +5,14 @@ import styles from "./navbar.module.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to toggle menu open/close
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Close the menu when a menu item is clicked on mobile
+  const closeMenu = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -101,19 +25,29 @@ const Navbar = () => {
         <ul className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
           {/* Use Link instead of a for routing */}
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeMenu}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about" onClick={closeMenu}>
+              About Us
+            </Link>
           </li>
           <li>
-            <Link to="/universities">Universities</Link>
+            <Link to="/universities" onClick={closeMenu}>
+              Universities
+            </Link>
           </li>
           <li>
-            <Link to="/programs">Programs</Link>
+            <Link to="/programs" onClick={closeMenu}>
+              Programs
+            </Link>
           </li>
           <li>
-            <Link to="/help">Help Desk</Link>
+            <Link to="/help" onClick={closeMenu}>
+              Help Desk
+            </Link>
           </li>
         </ul>
 
