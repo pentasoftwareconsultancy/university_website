@@ -131,6 +131,7 @@
   .grid {
     grid-template-columns: 1fr 1fr; /* Show two columns on smaller screens */
     gap: 15px; 
-    margin: 0 40px; /* Set equal left and right margin */
+    margin: 0 20px; 
+    padding: 0 30px
   }
 }
