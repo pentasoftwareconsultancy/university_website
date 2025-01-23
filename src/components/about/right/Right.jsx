@@ -15,14 +15,12 @@ function Right() {
           <div className={styles.imageWrapper1}>
 
             <img src='https://live.themewild.com/eduka/assets/img/about/02.jpg' alt="Image 2" className={styles.image2} />
-          </div>
-          <div className={styles.imageWrapper2}>
             <img src='https://live.themewild.com/eduka/assets/img/about/03.jpg' alt="Image 3" className={styles.image3} />
           </div>
 
         </div>
       </section>
-    </div>
+ </div>
   );
 }
 
