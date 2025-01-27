@@ -2,11 +2,13 @@
 .container {
   text-align: center;
   padding: 2rem;
-  background-color: #f5f7fa;
+  background-color: #f1f1f1;
   position: relative;
   overflow: hidden;
-  width: 100%; /* Full width */
-  margin: 0 auto;
+  width: 100%; 
+  /* margin: 0 auto; */
+  height: 80vh;
+  
 }
 
 /* Header styling */
@@ -18,16 +20,33 @@
 }
 
 .subtitle {
-  font-size: 0.9rem;
-  color: #f3a423;
-  letter-spacing: 2px;
+  color: #fda31b;
+  font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    border-bottom: 2px solid var(--theme-color2);
+    margin-top: 200px;
+}
+
+.fa-book-open-reader:before, .fa-book-reader:before {
+  content: "\f5da";
+}
+
+
+
+p {
+  font-size: 14px;
+  
 }
 
 .highlight {
   color: #f3a423;
 }
 
-/* Slider wrapper with proper card alignment */
+
 .slider {
   width: calc(100% - 460px); /* Subtract 230px from both sides */
   margin: 0 auto; /* Center the slider */
@@ -47,22 +66,43 @@
 
 /* Card styling for 3 items in one row */
 .card {
-  min-width: calc((100% - 6rem) / 3); /* 3 cards per row with proper spacing */
+  min-width: calc((100% - 6rem) / 3); 
   box-sizing: border-box;
   padding: 1rem;
   background: white;
-  border-radius: 10px;
+  border-radius: 60px 60px 60px 0;
   margin: 0 1rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 10px solid var(--theme-color2);
+  transition: var(--transition);
+  opacity: 0.2;
+  
+}
+
+.card:hover::before {
+  opacity: 1; /* Make the border more visible when hovering */
 }
 
 /* Image styling */
 .image {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   margin-bottom: 1rem;
+  margin-right: 150px;
 }
 
 .title {
@@ -77,79 +117,43 @@
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
-
-.readMore {
-  color: #f3a423;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.readMore:hover {
-  text-decoration: underline;
-}
-
-/* Navigation buttons */
-.navButton {
-  background-color: #f3a423;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  color: white;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-.navButton:hover {
-  background-color: #e68a00;
-}
-
-.navButton.left {
-  left: 1rem;
-}
-
-.navButton.right {
-  right: 1rem;
-}
-
-
-@media (max-width: 768px) {
-  /* Adjust slider width */
-  .slider {
-    width: 100%;
-    padding: 0 20px; /* Add padding for better alignment */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    height: auto;
   }
 
-  /* Adjust number of cards per row */
+  .header {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: 100px;
+  }
+
+  .slider {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Make each card take full width for mobile */
   .card {
-    min-width: 45%; /* Show two cards per row */
-    margin: 10px 0; /* Reduced margin for smaller screens */
+    min-width: 100%; /* Show one card at a time */
+    margin: 0;
+    border-radius: 15px;
+  }
+
+  .image {
+    width: 35px;
+    height: 35px;
   }
 
   .title {
-    font-size: 1rem; /* Smaller title font size */
+    font-size: 0.95rem;
   }
 
   .description {
-    font-size: 0.8rem; /* Smaller description font size */
-  }
-
-  .readMore {
-    font-size: 0.9rem; /* Smaller read more text */
-  }
-
-  /* Adjust navigation buttons size */
-  .navButton {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem; /* Smaller button size */
+    font-size: 0.8rem;
   }
 }

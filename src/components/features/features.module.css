@@ -1,25 +1,28 @@
+/* Container for feature cards */
 .container {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 20px;
-  padding: 20px; 
+  padding: 20px;
   flex-wrap: wrap;
-  margin: 0 auto; 
+  margin: 0 auto;
   width: 100%;
   margin-bottom: 50px;
+ 
 }
 
+/* Feature card styles */
 .featureCard {
   background: #ffffff;
-  border-radius: 20px; 
+  border-radius: 20px; /* Smoother rounded corners */
   padding: 30px;
   width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; 
-  justify-content: space-between; 
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .featureCard:hover {
@@ -27,82 +30,140 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Icon container */
 .iconNumberContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 20px; /* Increased margin for better spacing */
+  margin-bottom: 20px;
 }
+
+/* Icon (image) styling */
 .icon {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  background-color: #506d6a;
+  background-color: rgb(156, 79, 51);
   justify-content: center; /* Horizontally center the content */
   align-items: center; /* Vertically center the content */
   border-radius: 50%; /* Circular background */
   text-align: center;
-  display: flex; /* Flexbox to center the content */
+  display: flex;
+  /* filter: brightness(0) invert(1); */
 }
 
 
+/* Bounce Left Animation */
+@keyframes bounceLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Bounce Right Animation */
+@keyframes bounceRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Add specific animation classes */
+.animation-left {
+  animation: bounceLeft 1s ease forwards;
+}
+
+.animation-right {
+  animation: bounceRight 1s ease forwards;
+}
+
+/* Animation for fadeInUp */
+.animation {
+  opacity: 0;
+  animation: fadeInUp 3s forwards; /* 1s animation with forwards to persist the state */
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Starts lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at the original position */
+  }
+}
+
+/* Number styling inside the feature card */
 .number {
   font-size: 50px;
   font-weight: 800;
-  color: #ffffff; /* White text for contrast */
+  color: #109d6a; /* White text for contrast */
   font-family: 'Arial', sans-serif;
+  margin-left: 70px;
+  margin-bottom: 30px;
 }
 
+/* Title of the feature card */
 .title {
   font-size: 18px;
   font-weight: 600;
   color: #333333;
-  margin-bottom: 10px; /* Increased margin for better spacing */
+  margin-bottom: 10px;
 }
 
+/* Description of the feature card */
 .description {
   font-size: 14px;
   color: #666666;
   line-height: 1.6;
 }
 
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  /* Adjust the container to stack the cards on mobile */
   .container {
-    flex-direction: column; /* Stack cards vertically */
-    padding: 10px; 
-    
+    flex-direction: column;
+    padding: 10px;
   }
 
-  /* Adjust feature card width on mobile */
   .featureCard {
-    width: 100%; /* Full width on mobile */
-    padding: 20px; /* Less padding on smaller screens */
+    width: 100%;
+    padding: 20px;
   }
 
-  /* Adjust icon size on smaller screens */
   .icon {
     width: 60px;
     height: 60px;
   }
 
-  /* Reduce number font size on mobile */
   .number {
-    font-size: 40px; /* Smaller number on mobile */
+    font-size: 40px;
   }
 
-  /* Reduce title font size on mobile */
   .title {
-    font-size: 16px; /* Smaller title font on mobile */
+    font-size: 16px;
   }
 
-  /* Reduce description font size on mobile */
   .description {
-    font-size: 12px; /* Smaller description font on mobile */
+    font-size: 12px;
   }
 
-  /* Adjust the iconNumberContainer to have smaller gaps on mobile */
   .iconNumberContainer {
     gap: 10px;
   }

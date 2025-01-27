@@ -59,8 +59,7 @@
     font-weight: bold;
     color: #fcb12b;
   }
-  
-  /* Styling for the list of links */
+
   .links ul {
     list-style: none;
     padding: 0;
@@ -79,27 +78,28 @@
     color: #fcb12b;
   }
   
-  /* Newsletter section styling */
+  
   .newsletter {
     flex: 1.5;
     min-width: 300px;
   }
   
-  /* Newsletter header */
+ 
   .newsletter h3 {
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
     color: #fcb12b;
   }
+
   
-  /* Newsletter description */
+  
   .newsletter p {
     margin-bottom: 20px;
     font-size: 14px;
   }
   
-  /* Newsletter form styling */
+ 
   .newsletter form {
     display: flex;
     gap: 10px;
@@ -120,13 +120,13 @@
     border-color: #ffffff;
   }
   
-  /* Button styling for newsletter */
+  
   .button {
     padding: 12px 20px;
     background-color: #fcb12b;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
@@ -202,49 +202,46 @@
         
       }
 
-    /* Adjust logo size for mobile */
+
     .logo {
         font-size: 28px;
     }
 
-    /* Reduce font size for footer text */
+    
     .description, .contact p, .links li, .newsletter p {
         font-size: 14px;
         text-align-last: left;
     }
 
-    /* Newsletter form and button adjustments */
+    
     .newsletter form {
         flex-direction: column;
         gap: 10px;
     }
 
     .input {
-        width: 100%; /* Ensure input takes up full width on small screens */
+        width: 100%; 
     }
 
     .button {
-        width: 100%; /* Ensure button takes up full width on small screens */
-    }
-
-    /* Bottom section adjustments */
+        width: 100%; 
+      }
     .bottom {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    /* Adjust social icons for better mobile layout */
     .socialIcons {
         gap: 10px;
         justify-content: center;
     }
 
     .socialIcons i {
-        font-size: 20px; /* Slightly smaller for mobile */
+        font-size: 20px;
     }
 
     .socialIcons span {
-        font-size: 18px; /* Slightly smaller for mobile */
+        font-size: 18px; 
     }
 }

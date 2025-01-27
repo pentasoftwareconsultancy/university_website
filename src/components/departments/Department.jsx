@@ -28,6 +28,11 @@ function Department() {
       title: "Art & Design",
       description: "There are many variations of passages the majority have some injected humour.",
     },
+    {
+      image: "https://live.themewild.com/eduka/assets/img/icon/monitor.svg",
+      title: "Business And Finance",
+      description: "There are many variations of passages the majority have some injected humour.",
+    },
    
   ];
 
@@ -53,10 +58,15 @@ function Department() {
   return (
     <div className={styles.container}>
       <h2 className={styles.header}>
-        <span className={styles.subtitle}>DEPARTMENT</span>
+        <span className={styles.subtitle}>
+        <i className="fas fa-book-open-reader"></i>DEPARTMENT</span>
         <br />
-        Browse Our <span className={styles.highlight}>Department</span>
+        Browse Our <span className={styles.highlight}>
+        Department</span>
       </h2>
+      <p>
+      It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+      </p>
       <div className={styles.slider}>
         <div
           className={styles.slides}
@@ -69,19 +79,17 @@ function Department() {
               <img src={dept.image} alt={dept.title} className={styles.image} />
               <h3 className={styles.title}>{dept.title}</h3>
               <p className={styles.description}>{dept.description}</p>
-              <a href="#" className={styles.readMore}>
-                READ MORE →
-              </a>
+             
             </div>
           ))}
         </div>
       </div>
-      <button className={`${styles.navButton} ${styles.left}`} onClick={handlePrev}>
+      {/* <button className={`${styles.navButton} ${styles.left}`} onClick={handlePrev}>
         ‹
       </button>
       <button className={`${styles.navButton} ${styles.right}`} onClick={handleNext}>
         ›
-      </button>
+      </button> */}
     </div>
   );
 }

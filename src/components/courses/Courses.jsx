@@ -76,7 +76,8 @@ const Courses = () => {
 
   return (
     <div className={styles.courses}>
-      <h2 className={styles.heading}>Our Courses</h2>
+      <h2 className={styles.heading}>
+      <i className="fas fa-book-open-reader"></i>Our Courses</h2>
       <p className={styles.subtitle}>
         It is a long established fact that a reader will be distracted.
       </p>

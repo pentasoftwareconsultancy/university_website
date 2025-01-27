@@ -18,7 +18,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 200px;
 }
 
 /* Logo styling */
@@ -86,26 +86,45 @@
   align-items: center;
   z-index: 1000;
 }
-
-/* Mobile hamburger visibility */
 @media (max-width: 768px) {
+  .navContainer {
+    padding: 0 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger {
+    display: flex; /* Display hamburger on mobile */
+  }
+
+  /* Hide nav links initially on mobile */
   .navLinks {
-    display: none; /* Hide the nav links by default on mobile */
+    display: none; /* Hide links by default on mobile */
+    width: 100%; /* Full width on mobile */
+    justify-content: center; /* Center the items */
     flex-direction: column;
+    gap: 20px; /* More space between links */
+    text-align: center;
+  }
+
+  /* Adjust nav links when they are active */
+  .navLinks.active {
+    display: flex; /* Show links when active */
     position: absolute;
-    top: 60px; /* Below the navbar */
+    top: 60px; /* Adjust based on the navbar height */
     left: 0;
     right: 0;
     background-color: #333;
     padding: 20px 0;
-    z-index: 1000;
   }
 
-  .navLinks.active {
-    display: flex; /* Show nav links when active */
+  /* Adjust individual link styles on mobile */
+  .navLinks a {
+    font-size: 18px; /* Increase font size for better visibility */
+    padding: 10px 15px; /* Adjust padding */
   }
-
-  .hamburger {
-    display: flex; /* Only show hamburger on mobile */
+  
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
   }
 }

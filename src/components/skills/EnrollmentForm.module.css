@@ -12,7 +12,8 @@
     font-family: Arial, sans-serif;
     gap: 40px;
     padding: 0 230px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    height: 100vh;
    
 }
 
@@ -38,55 +39,66 @@
 .leftSection {
     background: #fff;
     color: #333;
-    padding: 20px 30px;
+ /* padding: 20px 30px; */
     border-radius:  70px 70px 70px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 35%;
-    margin-top: 80px;
+    width: 40%;
+    margin-top: 60px;
+    
+    
 }
 
-/* .head2 {
-    background-color: #f5a623; 
-    border-radius: 50px; 
-    padding: 20px; 
-    width: 110%; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    gap: 20px;
-} */
-
-
-.head2 h2 {
-    color: #f5a623; 
-    margin-bottom: 10px; 
-    font-size: 24px; 
-    font-weight: bold; 
-    font-family: Arial, sans-serif; 
-    line-height: 1.2; 
-}
-
-
-.head2 p {
-    color: #333; 
+/* CSS for the enrollment header section */
+.head {
+    /* text-align: left; */
+    /* margin-bottom: 20px; */
+    background: var(--theme-color2);
+    border-radius: 50px 50px 50px 0;
+    padding: 20px 30px;
+    /* background: #fff; */
+    /* border-radius: 50px; */
+    /* box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); */
+   
+  }
+  
+  .head h3 {
+    color: white;
+    margin: 0px;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    line-height: 1;
+  }
+  
+  .head p {
+    color: white;
     font-size: 14px;
-    margin-bottom: 20px; 
-    font-family: Arial, sans-serif; 
-    line-height: 1.5; 
-}
-
+    /* margin-bottom: 20px; */
+    font-family: Arial, sans-serif;
+    /* line-height: 1.6; */
+  }
+  
+  form {
+    padding: 30px;
+    
+  }
 
 .input,
 .textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+    background-color: #f2f3f5;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 14px;
+    margin-top: 10px;
+    
 }
 
 .textarea {
     resize: none;
     height: 80px;
+    background-color: #f2f3f5;
 }
 
 .button {
@@ -98,6 +110,9 @@
     cursor: pointer;
     font-size: 14px;
     transition: background 0.3s ease;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    
 }
 
 .button:hover {
@@ -126,7 +141,6 @@
     font-size: 14px;
     line-height: 1.6;
 }
-
 .progressBars {
     margin-bottom: 30px;
 }
@@ -135,17 +149,16 @@
     background: #ddd;
     height: 10px;
     border-radius: 5px;
-    overflow: hidden;
     margin: 10px 0;
     position: relative;
 }
-
-.progressFill {
+.progressFill1, .progressFill2, .progressFill3 {
     background: #f5a623;
     height: 100%;
     border-radius: 5px;
+    width: 0%; /* Start with 0% width */
+    transition: width 3s ease-out; /* Smooth transition */
 }
-
 
 .progressBars label {
     font-size: 14px;
@@ -153,6 +166,45 @@
     display: inline-block;
     color: #fff;
 }
+
+.progressText {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+/* Keyframes for progress fill animation (Optional if you want to use keyframes for a smoother transition) */
+@keyframes fillProgress1 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes fillProgress2 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+@keyframes fillProgress3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
 
 .button {
     background: #f5a623;
@@ -169,61 +221,107 @@
     background: #d48c1d;
 }
 
-
 @media (max-width: 768px) {
-    /* Adjust container padding for smaller screens */
-    .container1 {
-        flex-direction: column;
-        padding: 20px; /* Less padding on mobile */
-        margin-top: 30px;
-    }
 
-    .container1::before {
-        background: rgba(0, 39, 77, 0.8); /* Keep the overlay */
+    .container1 {
+        padding: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        min-height: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
     }
 
     .leftSection,
     .rightSection {
-        width: 100%; /* Full width on mobile */
-        margin-top: 20px; /* Reduce top margin */
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
     }
 
     .leftSection {
-        margin-top: 20px; /* Reduce margin */
+        margin-top: 30px;
+        border-radius: 20px; /* Adjust border radius for a more mobile-friendly look */
     }
 
-    .head2 h2 {
-        font-size: 20px; /* Smaller heading on mobile */
+    .rightSection {
+        width: 100%;
+        margin-top: 30px;
     }
 
-    .head2 p {
-        font-size: 12px; /* Smaller paragraph text */
+    /* Header styles */
+    .head {
+        padding: 15px 20px;
+        background: var(--theme-color2);
+        border-radius: 30px;
+        text-align: center;
     }
 
+    .head h3 {
+        font-size: 22px; /* Adjust font size for mobile */
+    }
+
+    .head p {
+        font-size: 12px; /* Smaller text for mobile */
+    }
+
+    /* Form input styles */
     .input,
     .textarea {
-        font-size: 12px; /* Smaller input fields */
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        margin-bottom: 12px;
     }
 
     .button {
-        padding: 10px 15px; /* Adjust button padding */
-        font-size: 12px; /* Smaller button text */
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 40px;
     }
 
     .rightSection h2 {
-        font-size: 22px; /* Smaller heading in right section */
-    }
-
-    .rightSection p {
-        font-size: 12px; /* Smaller paragraph text */
+        font-size: 20px; /* Smaller heading font for mobile */
     }
 
     .progressBars label {
-        font-size: 12px; /* Smaller label text */
+        font-size: 12px; /* Smaller text for progress bars */
     }
 
-    .button {
-        padding: 12px 20px; /* Adjust button padding */
-        font-size: 12px; /* Smaller button text */
+    .progressText {
+        font-size: 12px;
+    }
+
+    .progressFill1, .progressFill2, .progressFill3 {
+        height: 8px; /* Smaller progress bars for mobile */
+    }
+
+    /* Adjust progress bar animation for mobile */
+    @keyframes fillProgress1 {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 80%;
+        }
+    }
+
+    @keyframes fillProgress2 {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 60%;
+        }
+    }
+
+    @keyframes fillProgress3 {
+        0% {
+            width: 0%;
+        }
+        100% {
+            width: 70%;
+        }
     }
 }

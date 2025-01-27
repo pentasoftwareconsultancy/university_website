@@ -73,6 +73,7 @@ const UnderGraduate = ({ onClose }) => {
           </tbody>
         </table>
       </div>
+      
     </div>
   );
 };

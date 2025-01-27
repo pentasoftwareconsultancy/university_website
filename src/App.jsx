@@ -18,6 +18,8 @@ import DiplomaCourse from './pages/diplomaCourse/DiplomaCourse';
 import Certificates from './pages/certificates/Certificates';
 import PGDiploma from './pages/pgdiploma/PGDiploma';
 import ScrollTop from './components/scrollTop/ScrollTop';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 
 

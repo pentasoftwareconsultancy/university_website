@@ -1,22 +1,31 @@
 .testimonialsSection {
   text-align: center;
   padding: 0 230px; 
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   width: 100%;
   box-sizing: border-box;
-  margin-top: 50px;
+  margin-top: 60px;
   margin-left: auto;  /* Ensure proper margin on left side */
   margin-right: auto; /* Ensure proper margin on right side */
+  margin-bottom: 50px;
 }
 
 strong {
-  font-size: 18px;
-  font-weight: 600;
-  color: #f7931e;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  display: inline-block;
+  color: #fda31b;
+  font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    border-bottom: 2px solid var(--theme-color2);
+    margin-top: 200px;
 }
+
+.fa-book-open-reader:before, .fa-book-reader:before {
+  content: "\f5da";
+}
+
 
 .heading {
   font-size: 26px;
@@ -56,11 +65,12 @@ strong {
   padding: 1.5rem;
   position: relative;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  border-bottom: 5px solid var(--theme-color2);
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  /* transform: translateY(-10px); */
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
@@ -72,10 +82,11 @@ strong {
 }
 
 .feedback {
-  font-size: 1rem;
+  font-size: 14px;
   color: #444;
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  font-style: italic;
 }
 
 .footer {
@@ -90,7 +101,7 @@ strong {
   width: 50px;
   height: 50px;
   margin-right: 0.8rem;
-  border: 3px solid #f7931e;
+  border: 2px solid #f7931e;
 }
 
 .name {
@@ -103,20 +114,23 @@ strong {
   color: #f7931e;
   font-size: 0.95rem;
   font-weight: 500;
+  margin-right: 65px;
 }
 
 .score {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 10px;
   background: #f7931e;
   color: #fff;
-  font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 70px 70px 70px 0;
 }
 
+.score i {
+  font-size: 30px;
+}
 
 @media (max-width: 768px) {
   .testimonialsSection {
@@ -136,3 +150,6 @@ strong {
     margin-right: 50px;
   }
 }
+
+
+
